@@ -36,7 +36,7 @@ function Table(
     this.newElemMap = {};
     this.specialUrl;
     this.alwaysInvert;
-
+    
     this.setShowAlwaysInvert = function () {
         this.alwaysInvert = true;
     };
@@ -474,7 +474,7 @@ function Table(
 
     this.delete = function (_id) {
         var that = this;
-        showConfirmModal("OBS!", "Bekräfta handling", 'sm', 'error', function (yes) {
+        MYMODALS.showConfirmModal("OBS!", "Bekräfta handling", 'sm', 'error', function (yes) {
             if (!yes) {
                 return;
             }
@@ -502,7 +502,7 @@ function Table(
         }
         //
         //
-        showCrudEditDeleteModal("Edit/Delete", "", input, 'sm', function (modalInput) {
+        MYMODALS.showCrudEditDeleteModal("Edit/Delete", "", input, 'sm', function (modalInput) {
             //
             if (modalInput === false) {
                 return;

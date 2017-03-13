@@ -94,7 +94,6 @@ $("html").on('click', '#modal-crud-table-abort-btn', function () {
 });
 
 $("html").on('click', '#modal-crud-table-ok-btn', function () {
-    //
     CRUD_TABLE_MODAL_CB($('#modal-input'));
 });
 

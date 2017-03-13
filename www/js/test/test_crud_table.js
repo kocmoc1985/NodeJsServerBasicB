@@ -5,6 +5,5 @@ $(document).ready(function () {
 function addListeners() {
     $('#showCrudTable').click(function () {
         TABLE_TEACHER.show(true);
-        MYMODALS.showInfoModal("Error", "Test", "md", "error");
     });
 }
