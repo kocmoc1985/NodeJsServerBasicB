@@ -1,3 +1,5 @@
+var MYMODALS = new MyModals("js/modals/");
+
 var STUDENT_REST = new REST('student');
 var EDUCATION_REST = new REST('edu');
 var TEACHERS_REST = new REST('teach');
@@ -23,3 +25,9 @@ var TABLE_TEACHER = new Table(
             {name: 'Education', score: 'Score'},
             {name: EDUCATION_REST}
     );
+    
+    //=========================================================================
+    
+ 
+    
+  
