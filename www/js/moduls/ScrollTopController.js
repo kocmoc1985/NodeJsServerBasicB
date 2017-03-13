@@ -56,11 +56,11 @@ function addScrollTopListener() {
         $("body").append(elem);
         //
         $("#scrollTopBtn").mouseenter(function () {
-            $(this).css('opacity','1');
+            $(this).css('opacity', '1');
         });
-        
+
         $("#scrollTopBtn").mouseleave(function () {
-            $(this).css('opacity','0.5');
+            $(this).css('opacity', '0.5');
         });
     }
 

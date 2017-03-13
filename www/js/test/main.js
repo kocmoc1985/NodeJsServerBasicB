@@ -1,3 +1,8 @@
+//
+$(document).ready(function () {
+    addScrollTopListener();
+});
+
 var MYMODALS = new MyModals("js/modals/");
 //
 //
@@ -12,23 +17,23 @@ var ACCESS_REST = new REST('access');
 var LOGIN_REST = new REST('login'); // FOR THE LOGIN OPERATIONS -> loginhandler.class.js
 
 
-var TABLE_TEACHER = new Table(
-            'teacher',
-            true,
-            TEACHERS_REST,
-            'Administrera lärare',
-            '#output',
-            ['Namn', 'Pnr', 'Epost'],
-            ['name', 'pnr', 'epost'],
-            {_fields: '', _sort: 'name', _skip: 0, _limit: 15},
-            'name',
-            '_educations',
-            {name: 'Education', score: 'Score'},
-            {name: EDUCATION_REST}
-    );
-    
-    //=========================================================================
-    
- 
-    
+var TABLE_TEACHER = new MyCrudTable(
+        'teacher',
+        true,
+        TEACHERS_REST,
+        'Administrera lärare',
+        '#output',
+        ['Namn', 'Pnr', 'Epost'],
+        ['name', 'pnr', 'epost'],
+        {_fields: '', _sort: 'name', _skip: 0, _limit: 15},
+        'name',
+        '_educations',
+        {name: 'Education', score: 'Score'},
+        {name: EDUCATION_REST}
+);
+
+//=========================================================================
+
+
+
   

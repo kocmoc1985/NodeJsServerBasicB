@@ -1,4 +1,4 @@
-function Table(
+function MyCrudTable(
         uniquePrefix,
         canEdit,
         rest,
@@ -41,7 +41,7 @@ function Table(
         this.alwaysInvert = true;
     };
 
-    Table.prototype.show = function (initial) {
+    MyCrudTable.prototype.show = function (initial) {
         var that = this;
         this.maxPopDepth = 0;
 
@@ -103,7 +103,7 @@ function Table(
     };
 
     //#STATIC
-    Table._find = function (obj) {
+    MyCrudTable._find = function (obj) {
         return "find/" + JSON.stringify(obj);
     };
 
@@ -119,7 +119,7 @@ function Table(
         //
         var url;
         //
-        this.specialUrl ? url = this.specialUrl : url = Table._find(this.searchOptions);
+        this.specialUrl ? url = this.specialUrl : url = MyCrudTable._find(this.searchOptions);
         //
         this.REST.find(url, function (data, textStatus, jqXHR) {
             $(data).each(function (i, value) {
@@ -386,7 +386,7 @@ function Table(
     };
 
     //#Static
-    Table.buildComboRest = function (rest, searchParams, colName, cb) {
+    MyCrudTable.buildComboRest = function (rest, searchParams, colName, cb) {
         rest.find(_find(searchParams), function (data, textStatus, jqXHR) {
             var select = $('<select></select>');
             $(data).each(function (index, obj) {
@@ -398,7 +398,7 @@ function Table(
     };
 
     //#Static
-    Table.buildComboManual = function (arr, cb) {
+    MyCrudTable.buildComboManual = function (arr, cb) {
         var select = $('<select></select>');
         $(arr).each(function (index, item) {
             var option = $('<option value="' + item + '">' + item + "</option>");
@@ -563,7 +563,7 @@ function Table(
     };
 
     this.loadTemplateBasic = function () {
-        this.template = $(this.loadTemplate("js/moduls/tableBasic.html"));
+        this.template = $(this.loadTemplate("js/moduls/MyCrudTableBasic.html"));
     };
 
     this.setListeners();
