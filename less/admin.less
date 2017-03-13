@@ -1,0 +1,114 @@
+.table-show-invert{
+    width: 99%;
+    min-height: 20vh;
+    padding: 5px;
+
+    .table-invert-entry{
+        margin-bottom: 15px;
+    }
+
+    .row-invert{
+        width: 100%;
+        height: 5vh;
+        background-color:#49515A;
+        border: 1px solid black;
+
+        th {
+            display: block;
+            height: 100%;
+            width: 30%;
+            display: block;
+            float: left;
+            padding: 5px 0px 0px 5px;
+            border-right: 1px solid black;
+        }
+
+        td{
+            word-wrap:break-word;
+            display: block;
+            height: 100%;
+            max-width: 70%;
+            min-width: 50%;
+            padding: 5px 0px 0px 5px;
+            float: left;
+        }
+    }
+}
+
+@media (max-width:@XS){
+    .admin-show-items, .table-show-invert{
+        font-size: 1.8vmax;
+    }
+}
+
+.admin-show-items, .table-show-invert{
+    input{
+        /*float: left;*/
+        margin-bottom: 10px;
+    }
+
+    td{
+        text-align: left; 
+    }
+
+    th{
+        color: white !important;
+    }
+
+    .basic-icon:hover{
+        cursor: pointer;
+    }
+
+
+    a:hover{
+        cursor: pointer;
+    }
+
+    .basic-icon{
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+.table-basic-auto-create-form p{
+    padding-top: 10px;
+}
+
+.modal-body{
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid white;
+        margin: 1em 0;
+        padding: 0; 
+    }
+}
+
+/******************************************************************************/
+
+.admin-show-items-education{
+    td{
+        border-top: 1px none #000000 !important;
+    }
+}
+
+.admin-create-btn{
+    float: right;
+}
+
+.admin-add-form{
+    width: 50%;
+
+    select{
+        padding-left: 5px; 
+    }
+    label{
+        float:left;
+    }
+    .submit-btn-add-form{
+        float:left;
+    }
+}
+

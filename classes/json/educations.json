@@ -1,0 +1,36 @@
+[
+    {
+        "name": "suw16",
+        "score": 400,
+        "info": "Utbildningen passar dig som har viss förkunskap i programmering och vill utvecklas genom att lära dig den senaste",
+        "teachers": []    
+    },
+    {
+        "name": "suw17",
+        "score": 200,
+        "teachers": []
+    },
+    {
+        "name": "suw18",
+        "score": 600,
+        "info": "Utbildningen passar dig som har viss förkunskap i programmering och vill utvecklas genom att lära dig den senaste",
+        "teachers": []
+    },
+    {
+        "name": "suw19",
+        "score": 400,
+        "teachers": []
+    },
+    {
+        "name": "suw20",
+        "score": 150,
+        "info": "Utbildningen passar dig som har viss förkunskap i programmering och vill utvecklas genom att lära dig den senaste",
+        "teachers": []
+    },
+    {
+        "name": "suw21",
+        "score": 300,
+        "teachers": []
+    }
+
+]
