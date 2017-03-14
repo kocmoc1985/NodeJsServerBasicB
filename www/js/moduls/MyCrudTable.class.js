@@ -425,7 +425,7 @@ function MyCrudTable(
         var that = this;
         var updateSettings = {};
         this.buildCreateInput(function (input) {
-            showInputModalB("Create new", "", input, 'sm', function (modalInput) {
+            MYMODALS.showInputModalB("Create new", "", input, 'sm', function (modalInput) {
                 if (!modalInput) {
                     return;
                 }
