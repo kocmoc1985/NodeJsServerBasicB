@@ -48,19 +48,18 @@ module.exports = class Server {
         var FileFinder = require('./moduls/FileFinder.class');
         var Restrouter = require('./restrouterP.class');
 
-        var mset = g.settings.MONGOOSE;//see 'settingsConstr.js'
+        var mset = g.settings.MONGOOSE; // see 'settingsConstr.js'
 
-        //JSON read/write to file
+        // JSON read/write to file
         new JsonServerWriter(this.app);
         
-        //
+        // 
         new FileFinder(this.app);
-
 
         if (mset.connect === 'true') {
 
             var mongoose = require('mongoose');
-            //Stop mongoose from using an old promise library
+            // Stop mongoose from using an old promise library
             mongoose.Promise = Promise;
             //
             var Session = require('./session/models/session.model')(mongoose);

@@ -31,8 +31,11 @@ function addScrollTopListener() {
         if ($(window).scrollTop() > 800) {
             addScrollTopController();
         } else if ($(window).scrollTop() < 400) {
-            $("#scrollTopBtn").remove();
-            $("#scrollTopBtn").unbind('mouseenter mouseleave');
+            $("#scrollTopBtn").fadeOut(500, function () {
+                $("#scrollTopBtn").remove();
+                $("#scrollTopBtn").unbind('mouseenter mouseleave');
+            });
+
         }
 //        console.log("scroll top:",$(window).scrollTop());
     });
