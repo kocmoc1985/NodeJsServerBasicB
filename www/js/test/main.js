@@ -3,7 +3,7 @@ $(document).ready(function () {
     addScrollTopListener();
 });
 
-var MYMODALS = new MyModals("js/modals/");
+var MYMODALS = new MyModalsCrud("js/modals/");
 //
 //
 var STUDENT_REST = new REST('student');
