@@ -1,3 +1,4 @@
+//@server-side-dependency: restrouterP.class.js 
 class REST {
 
   constructor(entityName){

@@ -44,7 +44,7 @@ module.exports = class Server {
         var LoginhandlerRouter = require('./session/loginhandler.class');
         var Sessionhandler = require('./session/sessionhandler.class');
         var Mymiddleware = require('./session/mymiddleware.class');
-        var JSONReadWrite = require('./session/jsonWriter.class');
+        var JsonServerWriter = require('./session/JsonServerWriter.class');
         var Restrouter = require('./restrouterP.class');
 
         var mset = g.settings.MONGOOSE;//see 'settingsConstr.js'
@@ -53,7 +53,7 @@ module.exports = class Server {
         new Mymiddleware(this.app);
         
         //JSON read/write to file
-        new JSONReadWrite(this.app);
+        new JsonServerWriter(this.app);
          
 
         if (mset.connect === 'true') {
