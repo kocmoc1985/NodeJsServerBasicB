@@ -43,18 +43,19 @@ module.exports = class Server {
 
         var LoginhandlerRouter = require('./session/loginhandler.class');
         var Sessionhandler = require('./session/sessionhandler.class');
-        var Mymiddleware = require('./session/mymiddleware.class');
-        var JsonServerWriter = require('./session/JsonServerWriter.class');
+        var Mymiddleware = require('./moduls/MyMiddleware.class');
+        var JsonServerWriter = require('./moduls/JsonServerWriter.class');
+        var FileFinder = require('./moduls/FileFinder.class');
         var Restrouter = require('./restrouterP.class');
 
         var mset = g.settings.MONGOOSE;//see 'settingsConstr.js'
-        
-        //Implements some basic functionality
-        new Mymiddleware(this.app);
-        
+
         //JSON read/write to file
         new JsonServerWriter(this.app);
-         
+        
+        //
+        new FileFinder(this.app);
+
 
         if (mset.connect === 'true') {
 
@@ -65,7 +66,8 @@ module.exports = class Server {
             var Session = require('./session/models/session.model')(mongoose);
             this.app.use(new Sessionhandler(Session).middleware());
             //
-           
+            //Implements some basic functionality, OBS! Must be placed here
+            new Mymiddleware(this.app);
             //
             var studentModel = require('./models/Student.model')(mongoose);
             var educationModel = require('./models/Education.model')(mongoose);
