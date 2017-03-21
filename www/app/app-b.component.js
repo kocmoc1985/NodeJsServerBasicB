@@ -9,31 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var forms_1 = require('@angular/forms');
-var app_component_1 = require('./app.component');
-var app_b_component_1 = require('./app-b.component');
-var AppModule = (function () {
-    function AppModule() {
+var AppBComponent = (function () {
+    function AppBComponent() {
+        this.titleA = 'Hello Angular';
+        this.titleB = getAngular();
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [
-                platform_browser_1.BrowserModule,
-                forms_1.FormsModule
-            ],
-            declarations: [
-                app_component_1.AppComponent,
-                app_b_component_1.AppBComponent
-            ],
-            bootstrap: [
-                app_component_1.AppComponent,
-                app_b_component_1.AppBComponent
-            ]
+    AppBComponent = __decorate([
+        core_1.Component({
+            selector: 'my-app-b',
+            template: "\n        <h1>{{titleA}}</h1>\n        <h2>{{titleB}}</h2>\n        "
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], AppBComponent);
+    return AppBComponent;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.AppBComponent = AppBComponent;
+//# sourceMappingURL=app-b.component.js.map

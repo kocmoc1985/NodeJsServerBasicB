@@ -1,10 +1,4 @@
 //console.log = function() {};
-var ANGULAR = "ANGULAR SUCKS";
-function getAngular(){
-    return "ANGULAR SUCKS FUNCTION";
-}
-
-
 //
 var STUDENT_REST = new REST('student');
 var EDUCATION_REST = new REST('edu');
