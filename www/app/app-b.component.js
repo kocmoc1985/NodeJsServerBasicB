@@ -12,7 +12,7 @@ var core_1 = require('@angular/core');
 var AppBComponent = (function () {
     function AppBComponent() {
         this.titleA = 'Hello Angular';
-        this.titleB = getAngular();
+        this.titleB = 'getAngular()';
     }
     AppBComponent = __decorate([
         core_1.Component({

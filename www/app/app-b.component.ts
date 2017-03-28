@@ -10,5 +10,5 @@
     
     export class AppBComponent {
       titleA = 'Hello Angular';
-      titleB = getAngular();
+      titleB = 'getAngular()';
     }

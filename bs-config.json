@@ -2,7 +2,7 @@
   "server": {
     "baseDir": "www",
     "routes": {
-      "/node_modules": "node_modules"
+      "/www": "www"
     }
   }
 }
