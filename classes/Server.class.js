@@ -100,7 +100,7 @@ module.exports = class Server {
             //
             db.once('open', function () {
                 console.log("Connected to MongoDB");
-                JSONLoader.fillData();
+//                JSONLoader.fillData();
             });
         }//mset.connect
 

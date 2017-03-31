@@ -8,17 +8,17 @@
         <link rel="stylesheet" href="angular/styles.css">
 
         <!-- Polyfill(s) for older browsers -->
-        <script src="angularExtras/shim.min.js"></script>
-        <script src="angularExtras/zone.js"></script>
-        <script src="angular/system.js"></script>
+        <script src="app/angularExtras/shim.min.js"></script>
+        <script src="app/angularExtras/zone.js"></script>
+        <script src="app/angular/system.js"></script>
         
 
         <script src="js/angular.test.js"></script>
         <!--script src="angular/system-production.js"></script-->
 
-        <script src="angular/systemjs.config.js"></script>
+        <script src="app/angular/systemjs.config.js"></script>
         <script>
-            SystemJS.import('angular/main.js').catch(function (err) {
+            SystemJS.import('app/angular/main.js').catch(function (err) {
                 console.error(err);
             });
         </script>

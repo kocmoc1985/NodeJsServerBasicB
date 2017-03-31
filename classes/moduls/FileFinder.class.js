@@ -1,4 +1,5 @@
-module.exports = class JsonServerWriter {
+'use strict';
+module.exports = class FileFinder {
 
     constructor(express) {
         this.app = express;

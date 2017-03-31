@@ -1,5 +1,4 @@
 'use strict';
-//ClientSide: JsonServerWriterRest
 module.exports = class JsonServerWriter {
 
     constructor(express) {
